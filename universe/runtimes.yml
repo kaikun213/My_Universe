@@ -4,3 +4,5 @@ gym-core:
   tag: 0.20.6
 world-of-bits:
   tag: 0.20.0
+my-world-of-bits:
+  tag: latest

@@ -40,6 +40,16 @@ register_runtime(
     })
 
 register_runtime(
+    id='my-world-of-bits',
+    kind='docker',
+    image='my-world-of-bits:{}'.format(spec['my-world-of-bits']['tag']),
+    host_config={
+        'privileged': True,
+        'cap_add': ['SYS_ADMIN'],
+        'ipc_mode': 'host'
+    })
+
+register_runtime(
     id='vnc-windows',
     kind='windows',
 )

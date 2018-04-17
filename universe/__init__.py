@@ -1599,6 +1599,25 @@ for game in vnc_world_of_bits:
         },
     )
 
+#-------------------------- My World of Bits ------------------------#
+#     Experimental environment for character recognition on the
+#     Omniglot Dataset (Oneshot). More informations to the dataset
+#     can be found in Lake at al. paper "Human level concept learning through probabilistc program induction",
+#     More information on e experimental setup in the BSc thesis.
+
+register(
+    id='wob.mini.AnExperiment-v0',
+    entry_point='universe.wrappers:WrappedVNCEnv',
+    max_episode_steps=10**7,
+    tags={
+        'vnc': True,
+        'wob': True,
+        'runtime': 'world-of-bits',
+    },
+)
+
+
+
 #-------------------------- Complex Games ------------------------#
 #     Any game, program, app, or website can be a
 #     Universe environment. Here we include
