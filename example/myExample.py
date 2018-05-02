@@ -1,6 +1,5 @@
 import gym
 import universe # register the universe environments
-import numpy as np
 
 def forward(ob):
   """
@@ -22,7 +21,8 @@ def forward(ob):
 
   return action
 
-env = gym.make('wob.mini.AnExperiment-v0')
+#env = gym.make('wob.mini.AnExperiment-v0')
+env = gym.make('wob.mini.BisectAngle-v0')
 # automatically creates a local docker container
 env.configure(remotes=1, fps=5,
               vnc_driver='go',
@@ -33,4 +33,11 @@ observation_n = env.reset()
 while True:
   action_n = [forward(ob) for ob in observation_n] # your agent here
   observation_n, reward_n, done_n, info = env.step(action_n)
+  # print size of observation.vision (pixels)
+  if observation_n and observation_n[0]:
+      gray = [preprocess(ob, False) for ob in observation_n]    # (160,160,1) greyscale image for SP
+    #   color = [preprocess(ob, True) for ob in observation_n]
+    #   print gray
+    #   plt.imshow(gray[0], cmap='Greys',  interpolation='nearest')
+    #   plt.show()
   env.render()

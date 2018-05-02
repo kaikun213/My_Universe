@@ -1612,7 +1612,7 @@ register(
     tags={
         'vnc': True,
         'wob': True,
-        'runtime': 'world-of-bits',
+        'runtime': 'my-world-of-bits',
     },
 )
 

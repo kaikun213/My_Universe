@@ -298,6 +298,11 @@ class DockerInstance(object):
         #         log.error(six.text_type(e))
 
     def _spawn_container(self):
+        #DEBUG 
+        print "This is the container !!!"
+        print self.runtime.image, self.runtime.command, self.name, self.vnc_port, self.rewarder_port, self.runtime.host_config
+        # quay.io/openai/universe.world-of-bits:0.20.0 [] ('universe-D4zm4M-0',) 5900 15900 {'cap_add': ['SYS_ADMIN'], 'ipc_mode': 'host', 'privileged': True}
+        # my-world-of-bits:latest [] ('universe-0cVRA2-0',) 5900 15900 {'cap_add': ['SYS_ADMIN'], 'ipc_mode': 'host', 'privileged': True}
         # launch instance, and refresh if error
         container = self.client.create_container(
             image=self.runtime.image,
