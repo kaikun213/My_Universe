@@ -1490,7 +1490,7 @@ vnc_world_of_bits = [
     'wob.MiniWorldOfBits-v0',
     'wob.mini.BisectAngle-v0',
     'wob.mini.BookFlight-v0',
-    'wob.mini.ChaseCircle-v0',
+#    'wob.mini.ChaseCircle-v0',
     'wob.mini.ChooseDate-v0',
     'wob.mini.ChooseList-v0',
     'wob.mini.CircleCenter-v0',
@@ -1499,7 +1499,7 @@ vnc_world_of_bits = [
     'wob.mini.ClickCheckboxes-v0',
     'wob.mini.ClickCollapsible-v0',
     'wob.mini.ClickCollapsible2-v0',
-    'wob.mini.ClickColor-v0',
+#    'wob.mini.ClickColor-v0',
     'wob.mini.ClickDialog-v0',
     'wob.mini.ClickDialog2-v0',
     'wob.mini.ClickLink-v0',
@@ -1615,6 +1615,53 @@ register(
         'runtime': 'my-world-of-bits',
     },
 )
+
+register(
+    id='wob.mini.AnEasyExperiment-v0',
+    entry_point='universe.wrappers:WrappedVNCEnv',
+    max_episode_steps=10**7,
+    tags={
+        'vnc': True,
+        'wob': True,
+        'runtime': 'my-world-of-bits',
+    },
+)
+
+register(
+    id='wob.mini.CharacterExp-v0',
+    entry_point='universe.wrappers:WrappedVNCEnv',
+    max_episode_steps=10**7,
+    tags={
+        'vnc': True,
+        'wob': True,
+        'runtime': 'my-world-of-bits',
+    },
+)
+
+register(
+    id='wob.mini.ClickColor-v0',
+    entry_point='universe.wrappers:WrappedVNCEnv',
+    max_episode_steps=10**7,
+    tags={
+        'vnc': True,
+        'wob': True,
+        'runtime': 'my-world-of-bits',
+    },
+)
+
+register(
+    id='wob.mini.ChaseCircle-v0',
+    entry_point='universe.wrappers:WrappedVNCEnv',
+    max_episode_steps=10**7,
+    tags={
+        'vnc': True,
+        'wob': True,
+        'runtime': 'my-world-of-bits',
+    },
+)
+
+
+
 
 
 

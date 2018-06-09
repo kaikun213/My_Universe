@@ -42,7 +42,7 @@ register_runtime(
 register_runtime(
     id='my-world-of-bits',
     kind='docker',
-    image='my-world-of-bits:{}'.format(spec['my-world-of-bits']['tag']),
+    image='kaikun213/my-world-of-bits:{}'.format(spec['my-world-of-bits']['tag']),
     host_config={
         'privileged': True,
         'cap_add': ['SYS_ADMIN'],
